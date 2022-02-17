@@ -43,7 +43,7 @@
   <!-- Banner Image -->
 
   <div class="banner text-center" data-scroll-index='0'>
-    <div class="banner-overlay">
+    <div class="banner-overlay" style="padding-bottom: 40px;padding-top: 40px;">
       <div class="container">
         <p></p>
       </div>
@@ -73,27 +73,27 @@
                   <div class="radio-group" id="tipos">
                     <div class="formbuilder-radio">
                       <input name="tipos" access="false" id="tipo-inox" required="required" aria-required="true"
-                        value="inox" type="radio">
-                      <label for="tipos-0">Aço Inox</label>
+                        value="inox" type="radio"  checked="checked">
+                      <label for="tipo-inox">Aço Inox</label>
                     </div>
                     <div class="formbuilder-radio">
                       <input name="tipos" access="false" id="tipo-carbono" required="required" aria-required="true"
                         value="carbono" type="radio">
-                      <label for="tipos-1">Aço Carbono</label>
+                      <label for="tipo-carbono">Aço Carbono</label>
                     </div>
                     <div class="formbuilder-radio">
                       <input name="tipos" access="false" id="tipo-carbono-inox" required="required" aria-required="true"
-                        value="carbonoInox" type="radio" checked="checked">
-                      <label for="tipos-2">Aço Carbono e Grelhas Inox</label>
+                        value="carbonoInox" type="radio">
+                      <label for="tipo-carbono-inox">Aço Carbono e Grelhas Inox</label>
                     </div>
                   </div>
                 </div>
                 <div class="formbuilder-text form-group field-text-1645104307217">
-                  <label for="text-1645104307217" class="formbuilder-text-label">Largura</label>
+                  <label for="size-larg" class="formbuilder-text-label">Largura (cm):</label>
                   <input type="text" class="form-control" name="text-1645104307217" access="false" id="size-larg">
                 </div>
                 <div class="formbuilder-text form-group field-text-1645104309398">
-                  <label for="text-1645104309398" class="formbuilder-text-label">Comprimento</label>
+                  <label for="size-comp" class="formbuilder-text-label">Comprimento (cm):</label>
                   <input type="text" class="form-control" name="text-1645104309398" access="false" id="size-comp">
                 </div>
                 <div class="formbuilder-checkbox-group form-group field-checkbox-group-1644687039810">
@@ -105,37 +105,37 @@
                     <div class="formbuilder-checkbox">
                       <input name="checkbox-group-1644687039810[]" access="false" id="checkbox-fireBxInox"
                         value="fireBxInox" type="checkbox">
-                      <label for="checkbox-group-1644687039810-0">Fire Box em aço inox</label>
+                      <label for="checkbox-fireBxInox">Fire Box em aço inox</label>
                     </div>
                     <div class="formbuilder-checkbox">
                       <input name="checkbox-group-1644687039810[]" access="false" id="checkbox-fireBxCarb"
                         value="fireBxCarb" type="checkbox">
-                      <label for="checkbox-group-1644687039810-1">Fire Box em aço carbono</label>
+                      <label for="checkbox-fireBxCarb">Fire Box em aço carbono</label>
                     </div>
                     <div class="formbuilder-checkbox">
                       <input name="checkbox-group-1644687039810[]" access="false" id="checkbox-PortaFireBxInox"
                         value="PortaFireBxInox" type="checkbox">
-                      <label for="checkbox-group-1644687039810-2">Porta fire box em inox</label>
+                      <label for="checkbox-PortaFireBxInox">Porta fire box em inox</label>
                     </div>
                     <div class="formbuilder-checkbox">
                       <input name="checkbox-group-1644687039810[]" access="false" id="checkbox-PortaFireBxCarb"
                         value="PortaFireBxCarb" type="checkbox">
-                      <label for="checkbox-group-1644687039810-3">Porta fire box em aço carbono</label>
+                      <label for="checkbox-PortaFireBxCarb">Porta fire box em aço carbono</label>
                     </div>
                     <div class="formbuilder-checkbox">
                       <input name="checkbox-group-1644687039810[]" access="false" id="checkbox-SistInclGrelha"
                         value="SistInclGrelha" type="checkbox">
-                      <label for="checkbox-group-1644687039810-4">Sistema com inclinação de grelhas</label>
+                      <label for="checkbox-SistInclGrelha">Sistema com inclinação de grelhas</label>
                     </div>
                     <div class="formbuilder-checkbox">
                       <input name="checkbox-group-1644687039810[]" access="false" id="checkbox-BifeteiraCarb"
                         value="BifeteiraCarb" type="checkbox">
-                      <label for="checkbox-group-1644687039810-5">Bifeteira em aço carbono</label>
+                      <label for="checkbox-BifeteiraCarb">Bifeteira em aço carbono</label>
                     </div>
                     <div class="formbuilder-checkbox">
                       <input name="checkbox-group-1644687039810[]" access="false" id="checkbox-GrelhaDescanco"
                         value="GrelhaDescanco" type="checkbox">
-                      <label for="checkbox-group-1644687039810-5">Grelha de Descanço</label>
+                      <label for="checkbox-GrelhaDescanco">Grelha de Descanço</label>
                     </div>
                   </div>
                 </div>
@@ -163,30 +163,30 @@
       'PortaFireBxCarb': 230.0,
       'SistInclGrelha': 170.0,
       'BifeteiraCarb': 200.0,
-      'GrelhaDescanco': 250.0
+      'GrelhaDescanco': 0.0
     };
 
-    var check = document.getElementById("checkbox-fireBxInox");
-    check.addEventListener("change", function (e) {
-      if (check.checked == true)
+    var check1 = document.getElementById("checkbox-fireBxInox");
+    check1.addEventListener("change", function (e) {
+      if (check1.checked == true)
         document.getElementById("checkbox-fireBxCarb").checked = false;
     });
 
-    var check = document.getElementById("checkbox-fireBxCarb");
-    check.addEventListener("change", function (e) {
-      if (check.checked == true)
+    var check2 = document.getElementById("checkbox-fireBxCarb");
+    check2.addEventListener("change", function (e) {
+      if (check2.checked == true)
         document.getElementById("checkbox-fireBxInox").checked = false;
     });
 
-    var check = document.getElementById("checkbox-PortaFireBxInox");
-    check.addEventListener("change", function (e) {
-      if (check.checked == true)
+    var check3 = document.getElementById("checkbox-PortaFireBxInox");
+    check3.addEventListener("change", function (e) {
+      if (check3.checked == true)
         document.getElementById("checkbox-PortaFireBxCarb").checked = false;
     });
 
-    var check = document.getElementById("checkbox-PortaFireBxCarb");
-    check.addEventListener("change", function (e) {
-      if (check.checked == true)
+    var check4 = document.getElementById("checkbox-PortaFireBxCarb");
+    check4.addEventListener("change", function (e) {
+      if (check4.checked == true)
         document.getElementById("checkbox-PortaFireBxInox").checked = false;
     });
 
