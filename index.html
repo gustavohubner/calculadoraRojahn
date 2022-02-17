@@ -58,7 +58,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 section-title text-center">
-          <h3>Calcule o preço de sua churrasqueira</h3>
+          <h3>Calcule o preço de sua Parrilla</h3>
           <span class="section-title-line"></span>
         </div>
 
@@ -88,21 +88,13 @@
                     </div>
                   </div>
                 </div>
-                <div class="formbuilder-select form-group field-select-1644686919838">
-                  <label for="select-1644686919838" class="formbuilder-select-label">Tamanho:</label>
-                  <select class="form-control" name="select-1644686919838" id="select-size">
-                    <option value="50x50" selected="true" id="select-1644686919838-0">50x50</option>
-                    <option value="60x50" id="select-1644686919838-1">60x50</option>
-                    <option value="70x50" id="select-1644686919838-2">70x50</option>
-                    <option value="80x50" id="select-1644686919838-3">80x50</option>
-                    <option value="90x50" id="select-1644686919838-4">90x50</option>
-                    <option value="100x50" id="select-1644686919838-5">100x50</option>
-                    <option value="110x50" id="select-1644686919838-6">110x50</option>
-                    <option value="120x50" id="select-1644686919838-7">120x50</option>
-                    <option value="130x50" id="select-1644686919838-8">130x50</option>
-                    <option value="140x50" id="select-1644686919838-9">140x50</option>
-                    <option value="150x50" id="select-1644686919838-10">150x50</option>
-                  </select>
+                <div class="formbuilder-text form-group field-text-1645104307217">
+                  <label for="text-1645104307217" class="formbuilder-text-label">Largura</label>
+                  <input type="text" class="form-control" name="text-1645104307217" access="false" id="size-larg">
+                </div>
+                <div class="formbuilder-text form-group field-text-1645104309398">
+                  <label for="text-1645104309398" class="formbuilder-text-label">Comprimento</label>
+                  <input type="text" class="form-control" name="text-1645104309398" access="false" id="size-comp">
                 </div>
                 <div class="formbuilder-checkbox-group form-group field-checkbox-group-1644687039810">
                   <label for="checkbox-group-1644687039810" class="formbuilder-checkbox-group-label">Acessórios
@@ -140,6 +132,11 @@
                         value="BifeteiraCarb" type="checkbox">
                       <label for="checkbox-group-1644687039810-5">Bifeteira em aço carbono</label>
                     </div>
+                    <div class="formbuilder-checkbox">
+                      <input name="checkbox-group-1644687039810[]" access="false" id="checkbox-GrelhaDescanco"
+                        value="GrelhaDescanco" type="checkbox">
+                      <label for="checkbox-group-1644687039810-5">Grelha de Descanço</label>
+                    </div>
                   </div>
                 </div>
                 <!-- <a class="anchor-btn" onclick="calcular()">Calcular Valor<i class="fas fa-arrow-right pd-lt-10"></i></a> -->
@@ -159,48 +156,6 @@
   <!-- End About -->
 
   <script>
-    var precos = {
-      'inox': {
-        '50x50': 2250.0,
-        '60x50': 2700.0,
-        '70x50': 3150.0,
-        '80x50': 3600.0,
-        '90x50': 4050.0,
-        '100x50': 4500.0,
-        '110x50': 4950.0,
-        '120x50': 5400.0,
-        '130x50': 5850.0,
-        '140x50': 6300.0,
-        '150x50': 6750.0,
-      },
-      'carbono': {
-        '50x50': 1625.0,
-        '60x50': 1950.0,
-        '70x50': 2275.0,
-        '80x50': 2600.0,
-        '90x50': 2925.0,
-        '100x50': 3250.0,
-        '110x50': 3575.0,
-        '120x50': 3900.0,
-        '130x50': 4225.0,
-        '140x50': 4550.0,
-        '150x50': 4875.0,
-      },
-      'carbonoInox': {
-        '50x50': 2090.0,
-        '60x50': 2420.0,
-        '70x50': 2825.0,
-        '80x50': 3225.0,
-        '90x50': 3630.0,
-        '100x50': 4030.0,
-        '110x50': 4435.0,
-        '120x50': 4840.0,
-        '130x50': 5240.0,
-        '140x50': 5650.0,
-        '150x50': 6045.0,
-      },
-    };
-
     var opcionais = {
       'fireBxInox': 700.0,
       'fireBxCarb': 450.0,
@@ -208,35 +163,67 @@
       'PortaFireBxCarb': 230.0,
       'SistInclGrelha': 170.0,
       'BifeteiraCarb': 200.0,
+      'GrelhaDescanco': 250.0
     };
 
-    // var inox = document.getElementById("tipo-inox");
-    // var carb = document.getElementById("tipo-carbono");
-    // var carbinox = document.getElementById("tipo-carbono-inox");
-    // document.getElementById("form").addEventListener('change', alert("aaa"));
+    var check = document.getElementById("checkbox-fireBxInox");
+    check.addEventListener("change", function (e) {
+      if (check.checked == true)
+        document.getElementById("checkbox-fireBxCarb").checked = false;
+    });
 
+    var check = document.getElementById("checkbox-fireBxCarb");
+    check.addEventListener("change", function (e) {
+      if (check.checked == true)
+        document.getElementById("checkbox-fireBxInox").checked = false;
+    });
 
+    var check = document.getElementById("checkbox-PortaFireBxInox");
+    check.addEventListener("change", function (e) {
+      if (check.checked == true)
+        document.getElementById("checkbox-PortaFireBxCarb").checked = false;
+    });
+
+    var check = document.getElementById("checkbox-PortaFireBxCarb");
+    check.addEventListener("change", function (e) {
+      if (check.checked == true)
+        document.getElementById("checkbox-PortaFireBxInox").checked = false;
+    });
 
     var form = document.getElementById("form")
     form.addEventListener("change", function (e) {
       calcular();
 
     });
+
     calcular();
     function calcular() {
 
       var tipo = document.querySelector('input[name="tipos"]:checked').value;
-      var tamanho = document.getElementById("select-size").value;
+      var largura = document.getElementById("size-larg").value;
+      var comprimento = document.getElementById("size-comp").value;
 
-      var preco = precos[tipo][tamanho];
+      var area = largura * comprimento;
+
+      var valores = {
+        "inox": 10000 * area / 10000,
+        "carbono": (7200) * (area / 10000),
+        "carbonoInox": (7200 * (area / 10000)) + ((area / 10000) * (13) * 120)
+      };
+
+      var preco = valores[tipo];
 
       var opc = document.querySelectorAll('input[name="checkbox-group-1644687039810[]"]:checked')
 
       opc.forEach(function (item) {
-        preco += opcionais[item.value];
+
+        if (item.value == "GrelhaDescanco") {
+          preco += (largura / 100) * (comprimento / 200) * 13 * 120;
+        } else
+          preco += opcionais[item.value];
       })
 
-      document.getElementById("total_text").textContent = "Valor Total: R$ " + preco + ",00"
+      document.getElementById("total_text").textContent = "Valor Total: R$ " + preco.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
     }
   </script>
   <!-- Contact -->
