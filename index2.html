@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>Calculadora Rojahn</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css" />
+
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <img src="images/logo-white.png" width="100"
+          alt="logo" class="logo-1"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="fas fa-bars"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Página Inicial</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">Sobre</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Contato</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Navbar -->
+
+  <!-- Banner Image -->
+
+  <div class="banner text-center" data-scroll-index='0'>
+    <div class="banner-overlay" style="padding-bottom: 40px;padding-top: 40px;">
+      <div class="container">
+        <p></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Banner Image -->
+
+  <!-- About -->
+
+  <div class="about-us section-padding" data-scroll-index='1'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 section-title text-center">
+          <h3>Calcule o preço de sua Churrasqueira Residencial</h3>
+          <span class="section-title-line"></span>
+          <a href="index.html"><button class="btn btn-danger" style="margin-top: 20px; "> Calculadora Parrilla </button></a> 
+        </div>
+
+        <div class="col-md-6 mb-60">
+          <div class="section-info">
+            <div class="sub-title-paragraph">
+              <div class="">
+              </div>
+              <form id="form">
+                <div class="rendered-form">
+                  <div class="formbuilder-select form-group field-modeloChurra">
+                    <label for="modeloChurra" class="formbuilder-select-label">Modelo</label>
+                    <select class="form-control" name="modeloChurra" id="modeloChurra">
+                      <option value="0" selected="true" id="modeloChurra-0">45x54 cm - 5 Espetos</option>
+                      <option value="1" selected="true" id="modeloChurra-1">55x66 cm - 7 Espetos</option>
+                      <option value="2" id="modeloChurra-2">67x79 cm - 9 Espetos</option>
+                      <option value="3" id="modeloChurra-3">80x90 cm - 11 Espetos</option>
+                      <option value="4" id="modeloChurra-4">91x101 cm - 13 Espetos</option>
+                      <option value="5" id="modeloChurra-5">102x111 cm - 15 Espetos</option>
+                      <option value="6" id="modeloChurra-6">112x124 cm - 17 Espetos</option>
+                    </select>
+                  </div>
+
+                  <div class="formbuilder-checkbox-group form-group field-checkbox-aces">
+                    <label for="checkbox-aces" class="formbuilder-checkbox-group-label">Acessórios e
+                      Extras
+                      <br>
+                    </label>
+                    <div class="checkbox-group">
+                      <div class="formbuilder-checkbox">
+                        <input name="checkbox-aces[]" access="false" id="checkbox-aces-0" value="0" type="checkbox">
+                        <label for="checkbox-aces-0">Espetos com cabo de Alumínio</label>
+                      </div>
+                      <div class="formbuilder-checkbox">
+                        <input name="checkbox-aces[]" access="false" id="checkbox-aces-1" value="1" type="checkbox">
+                        <label for="checkbox-aces-1">Espetos com cabo de Inox</label>
+                      </div>
+                      <div class="formbuilder-checkbox">
+                        <input name="checkbox-aces[]" access="false" id="checkbox-aces-2" value="2" type="checkbox">
+                        <label for="checkbox-aces-2">Forração Interna em Inox</label>
+                      </div>
+                      <div class="formbuilder-checkbox">
+                        <input name="checkbox-aces[]" access="false" id="checkbox-aces-3" value="3" type="checkbox">
+                        <label for="checkbox-aces-3">Fogão Cooktop queimador duplo</label>
+                      </div>
+                      <div class="formbuilder-checkbox">
+                        <input name="checkbox-aces[]" access="false" id="checkbox-aces-4" value="4" type="checkbox">
+                        <label for="checkbox-aces-4">Grelha em Inox 36x49,5 cm</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="grelha" class="formbuilder-radio-group form-group field-radio-group-grelha">
+                    <label for="radio-group-grelha" class="formbuilder-radio-group-label">Grelha em Inox
+                      <br>
+                    </label>
+                    <div class="radio-group">
+                      <div class="formbuilder-radio">
+                        <input name="radio-group-grelha" selected="true" access="false" id="radio-group-grelha-0"
+                          value="0" type="radio">
+                        <label for="radio-group-grelha-0">Cabo de madeira</label>
+                      </div>
+                      <div class="formbuilder-radio">
+                        <input name="radio-group-grelha" access="false" id="radio-group-grelha-1" value="1"
+                          type="radio">
+                        <label for="radio-group-grelha-1">Cabo de alumínio</label>
+                      </div>
+                      <div class="formbuilder-radio">
+                        <input name="radio-group-grelha" access="false" id="radio-group-grelha-2" value="2"
+                          type="radio">
+                        <label for="radio-group-grelha-2">Cabo de inox</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="">
+                <h3 access="false" id="total_text">Valor Total: R$ 0,00</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- End About -->
+
+  <script>
+    var grelhaDiv = document.getElementById('grelha');
+    grelhaDiv.style.visibility = document.getElementById("checkbox-aces-4").checked ? 'visible' : 'hidden';
+
+    var modelos = [2620, 2820, 3020, 3420, 3820, 4220, 4620];
+    var espetos = [5, 7, 9, 11, 13, 15, 17];
+    var valGrelha = [290, 310, 320];
+
+    var opcionais = {
+      'forracaoInoxInterna': 390,
+      'cookTop': 1050,
+      'espetoAlum': 20,
+      'espetoInox': 30,
+    };
+
+    var check1 = document.getElementById("checkbox-aces-4");
+    check1.addEventListener("change", function (e) {
+      if (check1.checked)
+        grelhaDiv.style.visibility = 'visible';
+      else
+        grelhaDiv.style.visibility = 'hidden';
+    });
+
+    var check2 = document.getElementById("checkbox-aces-0");
+    check2.addEventListener("change", function (e) {
+      if (check2.checked)
+        document.getElementById("checkbox-aces-1").checked = false;
+    });
+
+    var check2 = document.getElementById("checkbox-aces-1");
+    check2.addEventListener("change", function (e) {
+      if (check2.checked)
+        document.getElementById("checkbox-aces-0").checked = false;
+    });
+
+    var form = document.getElementById("form")
+    form.addEventListener("change", function (e) {
+      calcular();
+
+    });
+
+    calcular();
+    function calcular() {
+
+      var tipo = document.getElementById('modeloChurra').value;
+      var preco = 0;
+      preco += modelos[tipo];
+
+      var opc = document.querySelectorAll('input[name="checkbox-aces[]"]:checked');
+
+      opc.forEach(function (item) {
+
+        switch (item.value) {
+          case '0':
+            preco += 20 * espetos[tipo];
+            break;
+          case '1':
+            preco += 30 * espetos[tipo];
+            break;
+          case '2':
+            preco += 390;
+            break;
+          case '3':
+            preco += 1050
+            break;
+          case '4':
+            preco += valGrelha[document.querySelectorAll('input[name="radio-group-grelha"]:checked')[0].value]
+            break;
+          default: break;
+        }
+
+      })
+
+      document.getElementById("total_text").textContent = "Valor Total: " + preco.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+    }
+  </script>
+  <!-- Contact -->
+  <div class="contact section-padding" data-scroll-index='4'>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 section-title text-center">
+          <h3>ONDE NOS ENCONTRAR</h3>
+          <span class="section-title-line"></span>
+        </div>
+        <div class="col-lg-7 col-md-8">
+          <div class="part-info">
+            <div class="info-box">
+              <div class="icon"> <i class="fas fa-phone"></i> </div>
+              <div class="content">
+                <h4>Contato :</h4>
+                <p>(54) 99606.1896 | (54) 99601.1806</p>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="icon"> <i class="fas fa-map-marker-alt"></i> </div>
+              <div class="content">
+                <h4>Endereço :</h4>
+                <p>R. João Mocelin, 1112 - Panazzolo<br />CEP 95082-174 - Caxias do Sul - RS</p>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="icon"> <i class="fas fa-envelope"></i> </div>
+              <div class="content">
+                <h4>Email :</h4>
+                <p><a href="#">contato@rojahn.com.br</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Contact -->
+  <footer class="footer-copy">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <p>Churrasqueiras Rojahn</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <!-- owl carousel js -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- magnific-popup -->
+  <script src="js/jquery.fancybox.min.js"></script>
+
+  <!-- scrollIt js -->
+  <script src="js/scrollIt.min.js"></script>
+
+  <!-- isotope.pkgd.min js -->
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script>
+    $(window).on("scroll", function () {
+
+      var bodyScroll = $(window).scrollTop(),
+        navbar = $(".navbar");
+
+      if (bodyScroll > 130) {
+
+        navbar.addClass("nav-scroll");
+        $('.navbar-logo img').attr('src', 'images/logo-black.png');
+
+
+      } else {
+
+        navbar.removeClass("nav-scroll");
+        $('.navbar-logo img').attr('src', 'images/logo-white.png');
+
+      }
+
+    });
+
+    $(window).on("load", function () {
+
+
+
+      var bodyScroll = $(window).scrollTop(),
+        navbar = $(".navbar");
+
+      if (bodyScroll > 130) {
+
+        navbar.addClass("nav-scroll");
+        $('.navbar-logo img').attr('src', 'images/logo-black.png');
+
+
+      } else {
+
+        navbar.removeClass("nav-scroll");
+        $('.navbar-logo img').attr('src', 'images/logo-white.png');
+
+      }
+
+      /* smooth scroll
+        -------------------------------------------------------*/
+      $.scrollIt({
+
+        easing: 'swing',      // the easing function for animation
+        scrollTime: 900,       // how long (in ms) the animation takes
+        activeClass: 'active', // class given to the active nav element
+        onPageChange: null,    // function(pageIndex) that is called when page is changed
+        topOffset: -63
+      });
+
+      /* isotope
+      -------------------------------------------------------*/
+      var $gallery = $('.gallery').isotope({});
+      $('.gallery').isotope({
+
+        // options
+        itemSelector: '.item-img',
+        transitionDuration: '0.5s',
+
+      });
+
+
+      $(".gallery .single-image").fancybox({
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'speedIn': 600,
+        'speedOut': 200,
+        'overlayShow': false
+      });
+
+
+      /* filter items on button click
+      -------------------------------------------------------*/
+      $('.filtering').on('click', 'button', function () {
+
+        var filterValue = $(this).attr('data-filter');
+
+        $gallery.isotope({ filter: filterValue });
+
+      });
+
+      $('.filtering').on('click', 'button', function () {
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+      });
+
+    })
+
+    $(function () {
+      $(".cover-bg").each(function () {
+        var attr = $(this).attr('data-image-src');
+
+        if (typeof attr !== typeof undefined && attr !== false) {
+          $(this).css('background-image', 'url(' + attr + ')');
+        }
+
+      });
+
+      /* sections background color from data background
+      -------------------------------------------------------*/
+      $("[data-background-color]").each(function () {
+        $(this).css("background-color", $(this).attr("data-background-color"));
+      });
+
+
+      /* Owl Caroursel testimonial
+        -------------------------------------------------------*/
+
+      $('.testimonials .owl-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        items: 1,
+        margin: 30,
+        dots: true,
+        nav: false,
+
+      });
+
+    });
+
+  </script>
+</body>
+
+</html>
